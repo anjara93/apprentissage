@@ -14,7 +14,7 @@ class CarsController extends Controller
         return view('car.index', compact('car'));
     }
 
-    //formulaire d ajout
+    //formulaire d ajout de nouvel voiture
     public function AfficheForm(){
         return view('car.form');
     }
