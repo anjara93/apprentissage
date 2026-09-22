@@ -7,6 +7,7 @@ use App\Models\Cars;
 
 class CarsController extends Controller
 {
+    //affichage des listes des voitures
     public function liste(){
         $car = Cars::All();
 
