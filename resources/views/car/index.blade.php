@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('title', 'Liste des voitures')
+
+@section('content')
     <div class="container">
         @foreach ($car as $car)
-            <ul>
+            <ul class="list-unstyled">
                 <li>
-                    <a href="{{ route('car.detail', $car->id) }}">
+                    <a href="{{ route('car.detail', $car->id) }}" class="text-decoration-none">
                         {{ $car->nom }}
                     </a>
                 </li>
             </ul>
         @endforeach
 
-        <a href="{{ route('car.form') }}">nouvelle voiture</a>
+        <a href="{{ route('car.form') }}" class="btn btn-primary mt-3">
+            Nouvelle voiture
+        </a>
     </div>
-</body>
-</html>
+@endsection
