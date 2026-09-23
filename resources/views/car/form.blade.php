@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
+@extends('layouts.app')
+
+@section('content')
+    <div class="container" >
         <form action="" method="POST">
             @csrf
             <label>marque</label>
@@ -22,10 +16,8 @@
             <label>color</label>
             <input type="text" name="color">
 
-            <button type="submit">enregistrer</button>
+            <button type="submit" class="btn btn-secondary">enregistrer</button>
         </form>
-
-        <a href="{{ route('car.index') }}">liste des voitures</a>
     </div>
-</body>
-</html>
+    <a href="{{ route('car.index') }}" class="btn btn-link">liste des voitures</a>
+@endsection    

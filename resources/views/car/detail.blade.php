@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <a href="{{ route('car.index') }}">liste des voitures</a>
-    <div class="container">
-        <h5>Detail du voiture</h5>
-        <p><strong>marque:</strong>{{ $car->marque }}</p>
-        <p><strong>nom:</strong>{{ $car->nom }}</p>
-        <p><strong>number:</strong>{{ $car->number }}</p>
-        <p><strong>color:</strong>{{ $car->color }}</p>
+@extends('layouts.app')
+
+@section('title', 'Détail de la voiture')
+@section('content')
+    <div class="detail_container">
+        <h1>Détail de la voiture</h1>
+        <p><strong>Nom :</strong> {{ $car->nom }}</p>
+        <p><strong>Marque :</strong> {{ $car->marque }}</p>
+        <p><strong>Année :</strong> {{ $car->annee }}</p>
+        <p><strong>Couleur :</strong> {{ $car->couleur }}</p>
+
+        <a href="{{ route('car.index') }}" class="btn btn-secondary mt-3">Retour à la liste</a>
     </div>
-    <a href="{{ route('car.update',$car->id) }}">modifier</a>
-</body>
-</html>
+@endsection 

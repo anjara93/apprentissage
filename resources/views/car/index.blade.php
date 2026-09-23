@@ -3,7 +3,7 @@
 @section('title', 'Liste des voitures')
 
 @section('content')
-    <div class="container">
+    <div class="index_container">
         @foreach ($car as $car)
             <ul class="list-unstyled">
                 <li>

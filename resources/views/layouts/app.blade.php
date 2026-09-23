@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon App - @yield('title', 'Accueil')</title>
-
-    {{-- Bootstrap CSS --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>gestion de voitures - @yield('title', 'Accueil')</title>
+    @vite('resources/css/app.css')
 </head>
 <body>
 
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">Mon App</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="/cars">Voitures</a>
-            </div>
+    <div class="navbar">
+        <div class="layout_container">
+            <ul>
+                <li><a href="{{ route('car.index') }}">Accueil</a></li>
+                <li><a href="{{ route('car.form') }}">Ajouter une voiture</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
 
     {{-- Contenu des pages --}}
     <div class="container mt-4">
